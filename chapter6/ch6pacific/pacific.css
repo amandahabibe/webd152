@@ -1,0 +1,114 @@
+/*When needing to test CSS code, do so through index.html
+or other HTML pages. As CSS is only a supporting file for
+HTML pages, it cannot be tested on its own.*/
+
+body {
+  background-color: #90c7e3; /* bgc#90c7e3 */ /*will be fallback color for browser that does not support bgi linear gradient*/
+  background-image: linear-gradient(
+    to bottom,
+    #fff,
+    #90c7e3
+  ); /*bgi linear gradient*/
+  background-repeat: no-repeat;
+  color: #555; /*c#fff*/
+  font-family:
+    Arial, "Helvetica Neue", Helvetica, sans-serif; /*ffa used here */
+}
+#wrapper {
+  /*wrapper not included in HTML file yet, so need to do so before this code will work. */
+  background-color: #fff; /*bgc#fff*/
+  box-shadow: 3px 3px 3px #333; /*bsh 3px 3px 3px #333*/ /*box shadow adds a shadow to the element, with the first three values specifying the horizontal offset, vertical offset, and blur radius of the shadow, and the fourth value specifying the color of the shadow.*/
+  margin: auto;
+  min-width: 960px; /* mw960 no px needed bc default unit is px*/
+  max-width: 2048px; /* maw2048 */
+  width: 80%; /* w80% */
+}
+header {
+  background-color: #000032; /* bc#ffffff*/
+  background-image: url(images/sunset.jpg); /*bgi shortcut*/
+  background-position: right; /*bgdp*/
+  background-repeat: no-repeat; /*bgr*/
+  color: #fff; /*c#fff*/
+  height: 60px; /*h60 - no px needed bc default unit is px*/
+  padding-top: 15px; /*pt15 */
+  text-align: center; /*tac */
+}
+nav {
+  background-color: #fff; /*css keywords and values not case sensitive, 
+                              can use upper or lower case*/ /*bgc#fff*/
+  font-weight: bold; /*fwb*/
+  padding: 1em; /*p1em */
+  text-align: center; /*tac centers text in navigation */ /*bullet points remain left-aligned, but text is centered within the nav element */
+}
+nav a {
+  /* separate from nav element - to remove underline from hyperlinks*/
+  text-decoration: none; /*txd*/
+}
+
+main {
+  padding: 1px 20px 20px; /*p 1px 20px 20px - top, right/left, bottom*/
+}
+
+h1 {
+  margin-bottom: 0; /*typed mb0*/
+  margin-top: 0; /*mt0*/
+}
+
+h1,
+h2,
+h3,
+footer {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    Times,
+    Baskerville serif;
+}
+
+h2 {
+  color: #1976d2;
+  text-shadow: 1px 1px #ccc; /*txs then manually typed; 1px horizontal offset, and 1px vertical offset*/
+}
+
+h3 {
+  color: #003; /*c#003*/
+}
+
+dt {
+  color: #002171;
+}
+
+address {
+  font-style: normal;
+}
+
+footer {
+  font-size: 75%; /* fz75% */
+  font-style: italic; /*fsi*/
+  padding: 2em; /*p2em, configures empty space between element's content and border.*/
+  text-align: center; /*txa */
+}
+.resort {
+  /*class or id selectors like .resort should be below element selectors. */
+  color: #1976d2; /*c#1976d2 */
+  font-weight: bold; /*fwb */
+}
+
+#homehero,
+#yurthero,
+#trailhero {
+  background-repeat: no-repeat; /*bgr*/
+  background-size: cover; /*bgz cover - scales the background image to cover the entire element, while maintaining its aspect ratio. This means that the image will be resized to fill the entire area of the element, and any excess parts of the image will be cropped if necessary. */
+  height: 18.75rem; /*using rem units so the height scale is consistently based on the root font size, helps with accessibility and responsive design. h18.75rem*/
+}
+/*selector for home hero next*/
+
+#homehero {
+  background-image: url(images/coast2.jpg); /*bgi shortcut*/
+}
+#yurthero {
+  background-image: url(images/yurt.jpg); /*bgi shortcut*/
+}
+#trailhero {
+  background-image: url(images/trail.jpg); /*bgi shortcut*/
+}
