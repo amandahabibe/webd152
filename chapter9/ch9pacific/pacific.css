@@ -1,0 +1,354 @@
+/*When needing to test CSS code, do so through index.html
+or other HTML pages. As CSS is only a supporting file for
+HTML pages, it cannot be tested on its own.*/
+
+* {
+  /* universal selector */
+  box-sizing: border-box; /*bxbb Emmet*/
+}
+html {
+  scroll-behavior: smooth; /*scroll behavior smooth - allows for smooth scrolling when clicking on anchor links that navigate to different sections of the page. Instead of jumping abruptly to the target section, the page will scroll smoothly, providing a more visually appealing and user-friendly experience. */
+}
+
+body {
+  background-color: #90c7e3; /*bgc#90c7e3*/
+  background-image: linear-gradient(
+    to bottom,
+    #fff,
+    #90c7e3
+  ); /*bgi linear gradient - cwill display behind navigation area*/
+  border: 1px solid #003; /*bd1-solid-#003*/
+  box-shadow: 3px 3px 3px #333; /*bsh 3px 3px 3px #333*/ /*box shadow adds a shadow to the element, with the first three values specifying the horizontal offset, vertical offset, and blur radius of the shadow, and the fourth value specifying the color of the shadow.*/
+  color: #555; /*c#fff*/
+  font-family:
+    Arial, "Helvetica Neue", Helvetica, sans-serif; /*ffa used here */
+}
+#wrapper {
+  margin: auto;
+  max-width: 75rem; /* 1200px/16px = 75. 16px is default font size for most browsers. prevents
+  wrapper from getting too wide on larger monitors*/
+  width: 80%; /* w80% */
+}
+header {
+  background-color: #000032; /* bc#ffffff*/
+  background-image: url(images/sunset.jpg); /*bgi shortcut*/
+  background-position: right; /*bgdp*/
+  background-repeat: no-repeat; /*bgr*/
+  color: #fff; /*c#fff*/
+  height: auto; /*header will expand or shrink rather than being fixed height. */
+  padding: 1rem; /* p1rem - adds space inside header around content. */
+  text-align: center; /*tac */
+}
+
+header a {
+  text-decoration: none; /*tdn*/
+}
+header a:link,
+header a:visited {
+  color: #fff; /*c#fff */
+}
+header a:hover {
+  color: #90c7e3; /*c#90c7e3 */
+}
+nav {
+  font-size: 120%; /*fz120%*/
+  font-weight: bold; /*fwb*/
+  padding: 0em; /*removes any extra space around menu items. */
+  text-align: center; /*tac - centers menu items within nav container*/
+}
+
+nav ul {
+  align-items: stretch; /*list items stretch to fill width of container*/
+  box-sizing: border-box;
+  display: flex; /*df - turns list into a flex container, row or column arrangement and can control spacing*/
+  flex-direction: column; /*fd column - stacks list items vertically instead of horizontally*/
+  flex-wrap: wrap; /*menu items will move to new line if needed*/
+  list-style: none; /*removes default bullet points*/ /* REMOVED: list-style-type: none; /*lstnone - removes unordered list bullet points*/
+  margin: 0; /*m0*/
+  max-width: 100%; /*menu will not exceed container width*/
+  padding-left: 0; /*pl0 - removes default left padding */
+}
+
+nav li {
+  border-bottom: 1px solid #003; /*adds thin line under each item*/
+  padding: 0.5rem 0; /*adds vertical padding to each list item*/
+  max-width: 100%; /*maw100% adds vertical spacing inside each item and makes sure
+  each item doesn't exceed the container width */
+  box-sizing: border-box; /*ensures padding included in item's width*/
+  /* without box-sizing here again, padding would add 
+  to total width of item, potentially causing it to overflow container. */
+}
+
+nav a {
+  /* separate from nav element - to remove underline from hyperlinks*/
+  text-decoration: none; /*txd*/
+}
+nav a:link {
+  color: #5c7fa3; /*c#5c7fa3 - sets color of unvisited links*/
+}
+nav a:visited {
+  color: #344873; /*c#344873 - sets color of visited links*/
+}
+nav a:hover {
+  color: #a52a2a; /*c#a52a2a - sets color of links when hovered over with mouse*/
+}
+/*always code link psuedoclasses in following order:
+link, visited, hover, active. (LV HA or "love-hate") prevents conflicts, ensures styles behave as wanted across browsers*/
+
+main {
+  background-color: #fff; /*bgc#fff means white background color for main element*/
+  /* updating padding from px to rem: 1px 20px 20px 30px; ( top, right, bottom, left padding values respectively.) */
+  padding: 0.0625rem 1.25rem 1.25rem 1.875rem;
+}
+
+/* section {
+  /* padding: 1rem 0; */
+/*adds space inside each section, separating content
+   from edges of section
+}*/
+
+h1,
+h2,
+h3,
+footer {
+  font-family: Georgia, "Times New Roman", Times, Baskerville, serif;
+}
+
+h1 {
+  letter-spacing: 0.25em; /*lts.25em - adds spacing between "Pacific Trails Resort" header*/
+  margin-bottom: 0; /*typed mb0*/
+  margin-top: 0; /*mt0*/
+}
+
+h2 {
+  color: #1976d2;
+  text-shadow: 1px 1px #ccc; /*txs then manually typed; 1px horizontal offset, and 1px vertical offset*/
+}
+
+h3 {
+  color: #003; /*c#003*/
+}
+
+address {
+  font-style: normal;
+}
+
+footer {
+  background-color: #fff; /*bgc#fff*/
+  font-size: 75%; /* fz75% */
+  font-style: italic; /*fsi*/
+  padding: 2em; /*p2em, ideal unit of measurement/ size. padding 
+  will grow or shrink automatically if adjusting footer font size.
+   configures empty space between element's content and border.*/
+  max-width: 100vw; /*prevents footer from exceeding viewport width on smaller screens. */
+  overflow-wrap: break-word; /*ovw break-word - allows long words or URLs to 
+  break and wrap onto the next line, preventing overflow and maintaining readability. */
+  text-align: center; /*txa */
+}
+
+.resort {
+  /*class or id selectors like .resort should be below element selectors. */
+  color: #1976d2; /*c#1976d2 */
+  font-weight: bold; /*fwb */
+}
+
+/*no changes to the hero sections below*/
+
+#homehero,
+#yurthero,
+#trailhero {
+  background-repeat: no-repeat; /*bgr*/
+  background-size: cover; /*bgz cover - scales the background image to cover the entire element, while maintaining its aspect ratio. This means that the image will be resized to fill the entire area of the element, and any excess parts of the image will be cropped if necessary. */
+  height: 18.75rem; /*using rem units so the height scale is consistently based on the root font size, helps with accessibility and responsive design. h18.75rem*/
+}
+/*selector for home hero next*/
+
+#homehero {
+  background-image: url(images/coast2.jpg); /*bgi shortcut*/
+}
+#yurthero {
+  background-image: url(images/yurt.jpg); /*bgi shortcut*/
+}
+#trailhero {
+  background-image: url(images/trail.jpg); /*bgi shortcut*/
+}
+
+.card-row {
+  /*flexbox container*/
+  display: flex; /*enables flexbox layout*/
+  flex-direction: column; /*stacks cards or "children" vertically by default on smaller screens*/
+  gap: 1rem; /*adds space between cards, don't touch*/
+  max-width: 100vw; /*prevents row from exceeding viewport width on smaller screens. */
+  box-sizing: border-box; /*padding and border included in element's total width and height*/
+  overflow: auto; /*adds scrollbar if content exceeds row heigh*/
+}
+
+.card-row section {
+  /*targets all section element in card-row container - a descended selector  */
+  max-width: 100%; /*maw100% ensures each card doesn't exceed container width*/
+  box-sizing: border-box; /*ensures padding and border included in card's total width and height*/
+  overflow-wrap: break-word; /*long words broken and wrapped to next line*/
+}
+
+.sr-only {
+  /* this style keeps content accessible to assistive technologies, screen readers, etc. 
+          but keeps visually hidden from sighted users. */
+  position: absolute; /*removes element from normal doc. flow, allows precise positioning*/
+  width: 1px;
+  height: 1px;
+  padding: 0; /*removes any internal spacing*/
+  margin: -1px; /*moves element slightly outside of viewport*/
+  overflow: hidden; /*hides any content that might overflow tiny 1px box*/
+  clip: rect(
+    0,
+    0,
+    0,
+    0
+  ); /*clips element to a 0-sized rectangle, effectively hiding it from view*/
+  border: 0; /*bd0 - removes any border that might be applied to the element, which would
+  defeat the purpose of hiding it visually. */
+}
+
+/* Table Styles */
+
+table {
+  border: 0.125rem solid #1976d2; /*rem units keep design scalable and accessible*/
+  border-collapse: collapse; /*merges adjacent borders so tables look clean*/
+  width: 100%; /*table takes up full width of viewport*/
+}
+
+th {
+  /*table headers*/
+  background-color: #1976d2; /*bgc#1976d2*/
+  color: #fff; /*c#fff*/
+}
+
+td,
+th {
+  /* table data and table heading*/
+  border: 0.125rem solid #1976d2; /*for individual cell borders*/
+  padding: 0.5rem; /*adds space inside each cell for readability*/
+}
+
+td {
+  text-align: center;
+}
+
+.text {
+  text-align: left; /*tal*/
+}
+tr:hover {
+  /*table row*/
+  background-color: #f0f8ff; /*light gray background on hover for better readability and interactivity*/
+}
+tr:nth-of-type(odd) {
+  /*table row*/
+  /*CSS pseudoclass that selects elements based on their order among siblings of the same type.
+  odd chooses every odd number in the sequence. */
+  background-color: #ffcd6f; /*alternate row shading of yellow*/
+}
+tr {
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 32.5rem) {
+  /*this means ONLY apply IF screen width is smaller than 32.5 rem. 
+  targets mobile phones and very small screens. 1 rem = 16 px. lots of changes
+  applied to make for faster loading and easier reading.
+  some background images removed, padding changed, no box shadow, etc.*/
+  body {
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+  }
+  #wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-image: none;
+    padding: 0;
+  }
+  footer {
+    padding: 1em;
+  }
+  #special table {
+    margin: 0 auto; /*centers table within container when media query active*/
+  }
+  #special td,
+  #special th {
+    display: block; /*stacks cells vertically*/
+    width: 100%;
+  }
+  #special th {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 0.625rem; /*reduces font size for headers on small screens*/
+    bottom: none;
+    overflow: hidden; /*oh*/
+  }
+
+  td.package::before {
+    /*labels each cell with its corresponding header for better readability on small screens. */
+    content: "Package: ";
+  }
+  td.description::before {
+    content: "Description: ";
+  }
+  td.nights::before {
+    content: "Nights: ";
+  }
+  td.cost::before {
+    content: "Cost: ";
+  }
+  .package,
+  .description,
+  .nights,
+  .cost {
+    /*adds spacing between label and cell content for better readability on
+  small screens. */
+    width: 100%; /* w100% */
+    padding-left: 35%;
+    position: relative;
+    text-align-last: left;
+  }
+  td::before {
+    width: 25%; /*w25%*/
+    display: block; /*block layout*/
+    padding-right: 0.625rem; /*pr0.625rem spacing after label*/
+    position: absolute;
+    top: 0.375rem;
+    left: 1rem; /*moves pseudo element with above slightly down and to the right inside the cell*/
+    color: #39c; /*c#39c - sets color of labels to a bright blue for better visibility on small screens*/
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  /*ONLY APPLIES if screen is larger than 37.5 rem*/
+  nav ul {
+    flex-direction: row; /*arranges menu items horizontally vs stacking vertically*/
+    justify-content: center; /*centers menu items horizontally across top within nav container*/
+    align-items: center; /*aic*/
+  }
+  nav li {
+    border-bottom: none; /*borbo removed border line*/
+    padding: 0 1rem; /*adds hor. space between each menu item*/
+    max-width: none; /*maw none - removes width restrictions, items spread out*/
+  }
+  .card-row {
+    flex-direction: row; /*fld row - cards shown side by side, not vertically */
+    gap: 2rem; /*g2rem, space increased between cards*/
+    max-width: 100vw; /*maw100vw, keeps rows inside viewport width*/
+  }
+  .card-row section {
+    flex: 1 1 0; /* each card grows and shrinks evenly, filling avail. space*/
+    max-width: 100%; /*maw100%, cards don't stretch beyond container */
+  }
+}
+/*rems  flexible vs pixels are fixed*/
