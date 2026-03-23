@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-color: #90c7e3; /*bgc#90c7e3*/
+  /*background-color: #90c7e3; /*bgc#90c7e3*/
   background-image: linear-gradient(
     to bottom,
     #fff,
@@ -276,7 +276,7 @@ input,
 textarea {
   margin-bottom: 0; /*mb0*/
   padding: 0.5em; /*space inside input fields*/
-  bottom: 1px solid #b0bec5;
+  border: 1px solid #b0bec5; /*corrected after teacher feedback*/
   border-radius: 0.25em;
   font-size: 1em; /*matches default font size of page*/
   background: #fff; /*inside of field is white*/
@@ -302,17 +302,14 @@ input[type="submit"] {
 }
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-  background-color: #003; /* changes background color on hover or focus for better interactivity*/
+  background-color: #005; /* changes background color on hover or focus for better interactivity*/
 }
 
 .center {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center; /*tac*/
-  margin: 0.1em; /*m2em tab then 0*/
-  gap: 1em 0; /*g0.5em*/
 }
 
 .center > h2, /*child combinator symbol*/
@@ -358,7 +355,7 @@ input[type="submit"]:focus {
     margin: 0;
     padding: 0;
     font-size: 0.625rem; /*reduces font size for headers on small screens*/
-    bottom: none;
+    border: none;
     overflow: hidden; /*oh*/
   }
 
@@ -384,8 +381,9 @@ input[type="submit"]:focus {
     width: 100%; /* w100% */
     padding-left: 35%;
     position: relative;
-    text-align-last: left;
+    text-align: left;
   }
+
   td::before {
     width: 25%; /*w25%*/
     display: block; /*block layout*/
@@ -405,9 +403,10 @@ input[type="submit"]:focus {
   affect other labels on the website*/ 
   form input,
   form textarea {
+    display: block;
     width: 100%; /*all elements full width*/
   }
-  input [type="submit"] {
+  input[type="submit"] {
     width: 100%; /*submit button full width*/
     margin-top: 0.5em; /*adds space above button*/
     /*mt0.5em*/
