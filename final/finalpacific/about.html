@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- /*fits page to screen width of device*/  -->
+    <meta
+      name="description"
+      content="At Pacific Trails Resort, we connect people back to nature and themselves. Learn more about our mission and our team."
+    />
+    <title>Pacific Trails Resort :: About Us</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="pacific.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1><a href="index.html">Pacific Trails Resort</a></h1>
+      </header>
+      <!-- The following Emmet shortcut was used to create the below unordered hyperlink list: nav>ul*4>a -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="yurts.html">Yurts</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+
+      <div id="abouthero"></div>
+      <!-- placeholder for CSS that will display hero image. -->
+
+      <main>
+        <h2>About Pacific Trails Resort</h2>
+        <p>
+          Our mission at Pacific Trails Resort is to get people back into nature
+          and back in tune with themselves. Our resort provides a getaway that
+          combines the raw beauty of the Big Sur landscape with luxury. Whether
+          you're looking to be active and explore or unwind and relax, you will
+          find that our resort can cover your every need.
+        </p>
+        <h3 class="team-header">Meet Our Team</h3>
+        <div class="team-grid">
+          <section class="team-card">
+            <img
+              src="images/sittingwoman.jpg"
+              alt="Pacific Trails Resort founder sitting cross-legged outside"
+            />
+            <h4>Lisa Reyez</h4>
+            <p class="team-role">Founder</p>
+            <p>
+              Lisa came to found Pacific Trails Resort in 1982 after her own
+              transformative experience visiting the Big Sur wilderness. She
+              heads the Pacific Trails team in bringing guests the ultimate
+              relaxation and luxury getaway vacation.
+            </p>
+          </section>
+          <section class="team-card">
+            <img
+              src="images/oceanyoga.jpg"
+              alt="Yoga instructor doing yoga pose in front of ocean cliff scene"
+            />
+            <h4>Tess Martin</h4>
+            <p class="team-role">Yoga Instructor</p>
+            <p>
+              Tess has been with Pacific Trails for over 10 years leading yoga
+              classes in different styles, including Hatha, Vinyasa, Ashtanga,
+              Yin, and more. She uses her practice to increase wellbeing and
+              peace through the mind-body connection.
+            </p>
+          </section>
+          <section class="team-card">
+            <img
+              src="images/kayakman.jpg"
+              alt="Kayak instructor standing with kayak and paddle on beach"
+            />
+            <h4>Martin Killarney</h4>
+            <p class="team-role">Kayak Instructor</p>
+            <p>
+              Martin leads kayaking trips out onto the beautiful Pacific Ocean
+              where guests can experience wonder from another perspective. He
+              brings over 15 years of experience along with CPR/AED and First
+              Aid certifications.
+            </p>
+          </section>
+
+          <section class="team-card">
+            <img
+              src="images/mansmilingprofessional.jpg"
+              alt="Guest experience coordinator standing and smiling"
+            />
+            <h4>Justin Mendoza</h4>
+            <p class="team-role">Guest Experience</p>
+            <p>
+              Justin acts as the main liaison for guests and their needs here at
+              the Resort. As a local turned a permanent resident of the Resort,
+              he treats this place as his home where visitors are family.
+            </p>
+          </section>
+        </div>
+
+        <div class="center">
+          <h2>Contact Us</h2>
+          <p>Required fields are marked with an asterisk*.</p>
+        </div>
+        <form
+          method="post"
+          action="https://webdevbasics.net/scripts/pacific.php"
+          autocomplete="on"
+        >
+          <!-- remove no validate when form is complete! only here when building form. when removed,
+           it will not let you continue without filling out required fields. -->
+          <!--  /* text= creates a label and text input for first name*/ -->
+          <label for="myFName">*First Name: </label>
+          <input
+            type="text"
+            id="myFName"
+            name="myFName"
+            required
+            aria-required="true"
+            autocomplete="given-name"
+          />
+          <label for="myLName">*Last Name: </label>
+          <input
+            type="text"
+            id="myLName"
+            name="myLName"
+            required
+            aria-required="true"
+            autocomplete="family-name"
+          />
+
+          <label for="myEmail">*Email: </label>
+          <input
+            type="email"
+            id="myEmail"
+            name="myEmail"
+            required
+            aria-required="true"
+            autocomplete="email"
+          />
+
+          <label for="myPhone">Phone: </label>
+          <input
+            type="tel"
+            id="myPhone"
+            name="myPhone"
+            maxlength="12"
+            autocomplete="tel"
+          />
+
+          <label for="myMessage">Message: </label>
+          <textarea
+            id="myMessage"
+            name="myMessage"
+            rows="2"
+            cols="30"
+            required
+            aria-required="true"
+            autocomplete="off"
+          >
+          </textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+        <address class="center">
+          <span class="resort">Pacific Trails Resort</span>
+          12010 Pacific Trails Road <br />
+          Zephyr, CA 95555 <br />
+          <a href="tel:8885555555">888-555-5555</a>
+        </address>
+      </main>
+      <footer>
+        <p>
+          Copyright &copy; 2026 Pacific Trails Resort<br />
+          <a href="mailto:habibeamanda@gmail.com">Amanda Habibe </a>
+        </p>
+      </footer>
+    </div>
+    <!-- closing div tag for wrapper -->
+  </body>
+</html>
